@@ -53,7 +53,6 @@ _Descripción detallada y de nivel no técnico para stakeholders._
 ## Diagrama de Entidades
 _Representación visual o lista de entidades con atributos y relaciones._
 
-
 **Entidades:**
 
 | Nombre   | Atributo | Tipo de Valor |
@@ -62,7 +61,6 @@ _Representación visual o lista de entidades con atributos y relaciones._
 | Usuario  | Nombre   | Texto         |
 | Equipo   | Nombre   | Texto         |
 | Equipo   | Fecha    | Fecha         |
-
 
 ## Criterios Funcionales
 
@@ -131,7 +129,6 @@ _Validaciones necesarias para garantizar la integridad._
 
 ### Protección contra acciones malintencionadas
 _Medidas para evitar manipulación de datos y abusos._
-
 
 | Orden | Concepto        | Descripción   | Complemento |
 |:-----:|:----------------|:--------------|:------------|
