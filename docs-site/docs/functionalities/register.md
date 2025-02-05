@@ -44,8 +44,8 @@ Al aceptar los terminos y condiciones el usuario debera validar su cuenta con el
 
 ## Prototipo del Frontend
 
-- **Imagen del prototipo:** ![Prototipo](C:\Users\Matias Lombardi\Documents\Proyectos\freelance\project-pitchSide\docs-site\static\img\docusaurus.png)
-- **Enlace al prototipo:** [Figma](C:\Users\Matias Lombardi\Documents\Proyectos\freelance\project-pitchSide\docs-site\static\img\docusaurus.png)
+- **Imagen del prototipo:** ![Prototipo](/docs-site/static/img/docusaurus.png)
+- **Enlace al prototipo:** [Figma](/docs-site/static/img/docusaurus.png)
 
 ---
 
@@ -192,7 +192,7 @@ _Comentarios adicionales sobre la funcionalidad._
 - La política de expiración del enlace de validación aún está por definir.
 - Se debe evaluar si se necesita una mejora relacionado con mejoras en la validación del correo electrónico.
 
-- **Issue relacionada:** [Enlace al Issue](URL_DEL_ISSUE)
+- **Issue relacionada:** [Enlace al Issue](/docs-site/static/img/docusaurus.png)
 
 | Orden | Nota | Issue |
 |:-----:|:-----|:-----:|
