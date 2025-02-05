@@ -6,7 +6,7 @@ on:
       - main  # Se ejecutará solo en la rama principal
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
