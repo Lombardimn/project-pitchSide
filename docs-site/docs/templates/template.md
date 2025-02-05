@@ -45,8 +45,8 @@ _Descripción detallada y de nivel no técnico para stakeholders._
 ---
 
 ## Prototipo del Frontend
-- **Imagen del prototipo:** ![Prototipo](/docs-site/static/img/docusaurus.png)
-- **Enlace al prototipo:** [Figma](/docs-site/static/img/docusaurus.png)
+- **Imagen del prototipo:** ![Prototipo](/img/docusaurus.png)
+- **Enlace al prototipo:** [Figma](/img/docusaurus.png)
 
 ---
 
@@ -155,7 +155,7 @@ _Detalles adicionales._
 ## Notas Adicionales o Comentarios
 _Comentarios adicionales sobre la funcionalidad._
 
-- **Issue relacionada:** [Enlace al Issue](/docs-site/static/img/docusaurus.png)
+- **Issue relacionada:** [Enlace al Issue](/img/docusaurus.png)
 
 | Orden | Nota      | Issue |
 |:-----:|:----------|:-----:|
