@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model rol {
+  Id Int @id @default(autoincrement())
+  Name String @db.VarChar(50)
+  Description String @db.VarChar(255)
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+  UserRoles user_role[]
+}
+
+model position {
+  Id Int @id @default(autoincrement())
+  Name String @db.VarChar(50)
+  Description String @db.VarChar(255)
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+  UserPositions user_position[]
+  PositionSubtypes position_subtype[]
+}
+
+model position_subtype {
+  Id Int @id @default(autoincrement())
+  Name String @db.VarChar(50)
+  Position position @relation(fields: [PositionId], references: [Id])
+  PositionId Int
+  Description String @db.VarChar(255)
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+}
+
+model user {
+  Id           String   @id @default(uuid()) @db.VarChar(36)
+  Email        String   @unique @db.VarChar(50)
+  Password     String   @db.VarChar(255)
+  Availability Int      @default(1) @db.SmallInt
+  Profile user_profile?
+  Positions user_position[]
+  UserRoles    user_role[]
+  CreatedAt    DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt    DateTime @updatedAt @db.Timestamp(6)
+}
+
+model user_profile {
+  Id Int @id @default(autoincrement())
+  User user @relation(fields: [UserId], references: [Id])
+  UserId String @unique @db.VarChar(36)
+  Name String @db.VarChar(50)
+  Lastname String @db.VarChar(50)
+  Age Int @db.SmallInt
+  Image String @db.VarChar(255)
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+}
+
+model user_position {
+  Id Int @id @default(autoincrement())
+  User user @relation(fields: [UserId], references: [Id])
+  UserId String @db.VarChar(36)
+  Position position @relation(fields: [PositionId], references: [Id])
+  PositionId Int
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+}
+
+model user_role {
+  Id Int @id @default(autoincrement())
+  User user @relation(fields: [UserId], references: [Id])
+  UserId String @unique @db.VarChar(36)
+  Role rol @relation(fields: [RoleId], references: [Id])
+  RoleId Int
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+}
