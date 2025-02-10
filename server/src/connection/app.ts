@@ -4,6 +4,7 @@ import { MESSAGE_API } from "./config"
 import express from "express"
 import morgan from "morgan"
 import pingRouter from "../routes/index.routes"
+import authRouter from "../services/authentication/routes/auth.routes"
 
 const app = express()
 
@@ -25,6 +26,7 @@ app.get("/", (_, res) => {
 })
 
 app.use("/api/v1", pingRouter)
+app.use("/api/v1", authRouter)
 
 // Error handler
 const errorHandler: ErrorMiddleware = (err, req, res, next) => {

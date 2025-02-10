@@ -38,8 +38,10 @@ model position_subtype {
 
 model user {
   Id           String   @id @default(uuid()) @db.VarChar(36)
+  Username     String   @unique @db.VarChar(20)
   Email        String   @unique @db.VarChar(50)
   Password     String   @db.VarChar(255)
+  Age Int @db.SmallInt
   Availability Int      @default(1) @db.SmallInt
   Profile user_profile?
   Positions user_position[]
@@ -54,7 +56,6 @@ model user_profile {
   UserId String @unique @db.VarChar(36)
   Name String @db.VarChar(50)
   Lastname String @db.VarChar(50)
-  Age Int @db.SmallInt
   Image String @db.VarChar(255)
   CreatedAt DateTime @default(now()) @db.Timestamp(6)
   UpdatedAt DateTime @updatedAt @db.Timestamp(6)
