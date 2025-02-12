@@ -42,12 +42,14 @@ model user {
   Email        String   @unique @db.VarChar(50)
   Password     String   @db.VarChar(255)
   Age Int @db.SmallInt
+  Verified     Boolean  @default(false)
   Availability Int      @default(1) @db.SmallInt
   Profile user_profile?
   Positions user_position[]
   UserRoles    user_role[]
   CreatedAt    DateTime @default(now()) @db.Timestamp(6)
   UpdatedAt    DateTime @updatedAt @db.Timestamp(6)
+  Validations  user_validation[]
 }
 
 model user_profile {
@@ -77,6 +79,15 @@ model user_role {
   UserId String @unique @db.VarChar(36)
   Role rol @relation(fields: [RoleId], references: [Id])
   RoleId Int
+  CreatedAt DateTime @default(now()) @db.Timestamp(6)
+  UpdatedAt DateTime @updatedAt @db.Timestamp(6)
+}
+
+model user_validation {
+  Id Int @id @default(autoincrement())
+  User user @relation(fields: [UserId], references: [Id])
+  UserId String @unique @db.VarChar(36)
+  Code String @db.VarChar(255)
   CreatedAt DateTime @default(now()) @db.Timestamp(6)
   UpdatedAt DateTime @updatedAt @db.Timestamp(6)
 }
