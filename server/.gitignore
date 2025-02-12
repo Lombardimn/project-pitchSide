@@ -33,3 +33,4 @@ Thumbs.db
 # Ignorar base de datos en SQLite
 prisma/dev.db
 prisma/test.db
+prisma/migrations/
