@@ -22,8 +22,8 @@ export interface NextMiddleware {
 
 export interface Middleware {
   (
-    req: Request,
-    res: Response,
-    next?: NextFunction
+    req: Request | any,
+    res: Response | any,
+    next?: NextFunction | any
   ): void
 }
