@@ -8,7 +8,7 @@ This software is licensed under the GNU Affero General Public License v3.0 (AGPL
 
     Commercial purposes include, but are not limited to: selling the software, offering it as part of a paid product or service, or using it to generate revenue in any form.
 
-    For commercial licensing inquiries, please contact: [your-email@example.com]
+    For commercial licensing inquiries, please contact: app.pitchside@gmail.com
 
 ---
 
@@ -40,7 +40,7 @@ Este software está licenciado bajo la GNU Affero General Public License v3.0 (A
 
     Se entiende por fines comerciales, entre otros: vender el software, ofrecerlo como parte de un producto o servicio pago, o utilizarlo para generar ingresos de cualquier tipo.
 
-    Para consultas sobre licencias comerciales, contactar a: [tu-email@ejemplo.com]
+    Para consultas sobre licencias comerciales, contactar a: app.pitchside@gmail.com
 
 ---
 
