@@ -1,4 +1,4 @@
-¡Perfecto! Vamos a profundizar en los siguientes puntos clave:
+# Configuración de autenticación y autorización
 
 1. **Autenticación y autorización** para usuarios (registro, inicio de sesión, roles como administrador y jugador).  
 2. **Modelos específicos para encuentros, equipos, temporadas y valoraciones.**  
@@ -6,17 +6,21 @@
 
 ---
 
-### **1. Configuración de autenticación y autorización**
+## **1. Configuración de autenticación y autorización**
+
 Usaremos **JWT (JSON Web Token)** para manejar la autenticación.
 
-#### **Backend: Configuración del Auth**
+### **Backend: Configuración del Auth**
+
 **Paso 1:** Instalar las dependencias necesarias:  
+
 ```bash
 npm install jsonwebtoken bcryptjs
 npm install --save-dev @types/jsonwebtoken @types/bcryptjs
 ```
 
 **Paso 2:** Crear un middleware para validar JWT en `src/middleware/authMiddleware.ts`:
+
 ```typescript
 import jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
@@ -43,6 +47,7 @@ export const protect = (req: AuthRequest, res: Response, next: NextFunction) => 
 ```
 
 **Paso 3:** Crear los controladores de registro y login en `src/controllers/authController.ts`:
+
 ```typescript
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
@@ -102,6 +107,7 @@ export const loginUser = async (req: Request, res: Response) => {
 ```
 
 **Paso 4:** Crear rutas de autenticación en `src/routes/authRoutes.ts`:
+
 ```typescript
 import { Router } from "express";
 import { registerUser, loginUser } from "../controllers/authController";
@@ -115,6 +121,7 @@ export default router;
 ```
 
 Conéctalas en `server.ts`:
+
 ```typescript
 import authRoutes from "./routes/authRoutes";
 
@@ -172,11 +179,13 @@ model Season {
 ```
 
 #### **Notas clave:**
+
 1. **`User`**: Relacionado con equipos (`teams`) y encuentros (`encounters`).
 2. **`Team`**: Relacionado con temporadas (`seasons`) y encuentros (`encounters`).
 3. **`Encounter`**: Incluye fecha, lugar, inscripción, etc.
 
 Realiza la migración:
+
 ```bash
 npx prisma migrate dev --name add_encounters_and_seasons
 ```
@@ -184,7 +193,9 @@ npx prisma migrate dev --name add_encounters_and_seasons
 ---
 
 ### **3. Rutas del API para encuentros**
+
 En `src/routes/encounterRoutes.ts`:
+
 ```typescript
 import { Router } from "express";
 import { protect } from "../middleware/authMiddleware";
@@ -199,6 +210,7 @@ export default router;
 ```
 
 Controlador básico en `src/controllers/encounterController.ts`:
+
 ```typescript
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
@@ -236,8 +248,3 @@ export const getEncounters = async (req: Request, res: Response) => {
 ```
 
 ---
-
-### **Siguientes pasos**
-1. ¿Te gustaría agregar la lógica de asignación de jugadores y estadísticas en el backend?  
-2. ¿Configuramos las rutas para notificaciones y temporadas?  
-3. ¿Diseñamos una integración inicial con el frontend para estas funcionalidades? 🚀

@@ -1,4 +1,4 @@
-¡Por supuesto! Aquí tienes una tabla resumen con todas las posiciones del fútbol actual para un equipo de 11 jugadores, organizadas por líneas y con una breve descripción de cada rol:
+# Posiciones de Futbol
 
 | **Línea**       | **Posición**                   | **Abreviatura** | **Descripción**                                                                 |
 |------------------|-------------------------------|-----------------|---------------------------------------------------------------------------------|
@@ -28,7 +28,7 @@
 
 ---
 
-### **Ejemplo en una formación 4-3-3:**
+## **Ejemplo en una formación 4-3-3:**
 
 | Línea        | Posición                       |
 |--------------|--------------------------------|
@@ -37,4 +37,4 @@
 | Mediocampo   | CDM, CM, CM                    |
 | Delanteros   | LW, ST, RW                     |
 
-¿Necesitas ampliar la información o aplicar esto a un esquema táctico específico? ⚽
+⚽

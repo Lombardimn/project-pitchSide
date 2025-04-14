@@ -149,7 +149,7 @@ _Validaciones necesarias para garantizar la integridad._
 
 | Orden | Concepto                   | Descripción                                                                 | Complemento |
 |:-----:|:----------------------------|:---------------------------------------------------------------------------|:------------|
-| 1     | **Formato de correo**       | El correo debe cumplir con un formato válido (ej.: 'usuario@dominio.com').   | Se debe validar tanto en frontend como en backend. |
+| 1     | **Formato de correo**       | El correo debe cumplir con un formato válido (ej.: <usuario@dominio.com>).   | Se debe validar tanto en frontend como en backend. |
 | 2     | **Contraseña segura**       | Debe contener al menos 8 caracteres, una mayúscula, un número y un símbolo.| Se recomienda el uso de un validador en tiempo real. |
 | 3     | **Campos obligatorios**     | No se permite el envío del formulario sin completar los campos requeridos. | Backend debe rechazar solicitudes incompletas. |
 | 4     | **Confirmación de contraseña** | Se debe ingresar la contraseña dos veces para evitar errores de tipeo.  | Las contraseñas deben coincidir antes de enviar el formulario. |
