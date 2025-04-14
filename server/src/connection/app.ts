@@ -26,7 +26,7 @@ app.get("/", (_, res) => {
 })
 
 app.use("/api/v1", pingRouter)
-app.use("/api/v1", authRouter)
+app.use("/api/v1/auth", authRouter)
 
 // Error handler
 const errorHandler: ErrorMiddleware = (err, req, res, next) => {

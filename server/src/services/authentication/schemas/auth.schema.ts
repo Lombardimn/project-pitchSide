@@ -10,10 +10,6 @@ export const singUpSchema = z.object({
   email: z
     .string({ required_error: 'El email es requerido' })
     .email({ message: 'Debe ser un email valido' }),
-  age: z
-    .number({ required_error: 'La edad es requerida' })
-    .min(18, { message: 'Debe ser mayor de 18 años' })
-    .max(60, { message: 'Debe ser menor de 60 años' }),
   password: z
     .string({ required_error: 'La contraseña es requerida' })
     .min(6, { message: 'Debe tener al menos 6 caracteres' })

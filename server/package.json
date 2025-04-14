@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "server for pitchside project",
   "dependencies": {
-    "@prisma/client": "^6.3.1",
+    "@prisma/client": "^6.6.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.7",
@@ -31,7 +31,7 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.13.1",
     "@types/nodemailer": "^6.4.17",
-    "prisma": "^6.3.1",
+    "prisma": "^6.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }

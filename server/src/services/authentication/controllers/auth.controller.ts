@@ -17,7 +17,6 @@ export const SingUp: Middleware = async (req, res) => {
   const {
     username: Username, 
     email: Email,
-    age: Age,
     password
   } = req.body
   
@@ -45,7 +44,6 @@ export const SingUp: Middleware = async (req, res) => {
       data: {
         Username,
         Email,
-        Age,
         Password: passwordHash
       }
     })
